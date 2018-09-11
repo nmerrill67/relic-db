@@ -1,0 +1,46 @@
+.sideBlue 
+{
+    height: 100%; 
+    width: 80px; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    background-color: #00539f; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+}
+
+.ui-autocomplete
+{
+    position:absolute;
+    cursor:default;
+    z-index:1001
+}
+.tab
+{
+
+	border: none;
+	border-radius: 8px;
+	background-color: white;
+	display: inline-block;
+	font-size: 18px;
+	left:90px;
+	padding: 5px 30px 5px 5px;
+	position: absolute;
+	text-align: left;
+}
+
+.searchTab
+{
+top:90px;
+}
+
+.importTab
+{
+top:140px;
+}
+
+.tabHover:hover
+{
+	background-color: #f2f2f2;
+}

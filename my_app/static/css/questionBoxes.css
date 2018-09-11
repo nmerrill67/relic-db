@@ -1,0 +1,46 @@
+.searchStyle
+{
+	display:none;
+	position: relative;
+	top:100px;
+    bottom: 200px;
+	left:300px;
+	z-index:5;
+}
+
+.clearDiv
+{
+	width:40%;
+}
+
+.question
+{
+	position:relative;
+	z-index:4;
+}
+
+.answers
+{
+	position:relative;
+	font-size: 14px;
+	font-family:Arial;
+	padding-left:30px;
+	z-index:3;
+}
+
+.questionStyle
+{
+	border-radius: 4px;
+	position:relative;
+	padding:15px;
+	margin-top:30px;
+	border-width: 2px;
+	border-style:solid;
+	border-color: #d9d9d9;
+	z:index:2;
+}
+
+.idHidden
+{
+	display:none;
+}
