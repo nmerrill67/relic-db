@@ -97,11 +97,8 @@ function updateRestrictions(){
 };
 
 function updateDisplayedQuestions(){
-    alert("matt");
      var isCreatingExamTemplate  = $("#searchFormat").val() == "examTemplate";
      if(!isCreatingExamTemplate){
-
-         alert("hi");
           $.ajax({
           url: "/questionsdisplayed",
           type: "POST",
