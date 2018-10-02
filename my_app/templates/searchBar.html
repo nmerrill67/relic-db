@@ -46,7 +46,20 @@ Search
             <input id ="tagQuantity" type="text" placeholder="Quantity of Questions">
         </td>
         <td>
-            <input id ="tagDifficulty" type="text" placeholder="Difficulty (0-10)">
+            <select name="Difficulty Level" id="tagDifficulty">
+                <option value="0" selected>Difficulty (0-10)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                </select>
+            <!--<input id ="tagDifficulty" type="text" placeholder="Difficulty (0-10)"> -->
         </td>
         <td>
 
@@ -87,6 +100,7 @@ Search
 
 <script>
 
+<!-- This is the function that controls the auto-complete -->
 
 $("#tagSearch").keyup(function() {
     var searchtext = $("#tagSearch").val();
