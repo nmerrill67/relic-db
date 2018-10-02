@@ -88,23 +88,6 @@ Search
 <script>
 
 
-$("#tagSearch").keyup(function() {
-    var searchtext = $("#tagSearch").val();
-    var tagfilter = $("#tagFilter").val();
-    $.ajax({
-      url: "/getTagsFromDB",
-      type: "POST",
-      data: JSON.stringify({"tag_level":tagfilter, "search_text":searchtext}),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      success: function(result) {
-          $("#tagSearch" ).autocomplete({source:result["tags"]});
-      },
-      failure: function(errMsg) {
-                alert(errMsg);
-            }
-    })
-  });
 </script>
 
 </body>
