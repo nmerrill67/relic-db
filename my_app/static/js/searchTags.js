@@ -1,4 +1,5 @@
 
+
 function addRestriction(table, tagLevel, tagText, tagQuantity, tagDifficulty, isCreatingExamTemplate){
      //Create the restriction table row
     var row = table.insertRow(-1);
@@ -12,8 +13,6 @@ function addRestriction(table, tagLevel, tagText, tagQuantity, tagDifficulty, is
     /*
     if(!isCreatingExamTemplate){
         tagQuantityCell.style.visibility = "hidden";
-    }
-    else
     {
         tagQuantityCell.style.visibility = "block";
     }

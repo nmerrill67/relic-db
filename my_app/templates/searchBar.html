@@ -1,6 +1,48 @@
 
 <!DOCTYPE html>
 <html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
 <head>
 <meta charset="UTF-8">
 <title>Relic</title>
@@ -94,9 +136,27 @@ Search
 <pre class = "searchStyle tabPage search" id="searchedQuestions"></pre>
 
 <label class = "searchStyle tabPage search"><b> Course Curriculumn for Tag Auto-Complete</b></label>
-<pre class = "searchStyle tabPage search" id="tagPossibilities"></pre>
-
-
+<button id ="myBtn">Display Tags</button>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+           <span class="close">&times;</span>
+           <pre class = "searchStyle tabPage search" id="tagPossibilities"></pre>
+        </div><!--The text of all the tags -->
+</div>
+<script>
+    var modal=document.getElementById('myModal');
+    var btn =document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function(){modal.style.display = "block";}
+    span.onclick = function(){
+    modal.style.display = "none";
+    }
+    window.onclick = function(evt){
+    if(evt.target ==modal){
+    modal.style.display = "none";
+    }
+    }
+</script>
 
 <script>
 
