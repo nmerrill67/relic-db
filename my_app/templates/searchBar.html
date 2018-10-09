@@ -75,17 +75,53 @@ Search
 
 <button class = "searchStyle tabPage search"onclick = importQuestionsIntoServer()>Import Questions</button>
 
+<table style="margin-bottom: 0em">
+    <tr>
+        <td>
+            <select name="searchStyle" class = "searchStyle tabPage search" id="searchFormat" onchange="updateTable()">
+                <option value = "examTemplate" selected="selected">Create Exam Template</option>
+                <option value  = "searchQuestions">Search Questions</option>
+            </select>
+        </td>
+        <td style="text-align: right">
+            <button id="exportExam" onclick="exportTemplate()" class="tabHover">Export Template</button>
+        </td>
+    </tr>
+</table>
 
-<select name="searchStyle" class = "searchStyle tabPage search" id="searchFormat" onchange="updateTable()">
-    <option value = "examTemplate" selected="selected">Create Exam Template</option>
-    <option value  = "searchQuestions">Search Questions</option>
-</select>
+<script>
+    function unitChange() {
+        console.log("unit");
+        if ($('#tagUnit')[0].options[$('#tagUnit')[0].options.selectedIndex].value != "0") {
+            $("#tagTopic").css("display", "block").val("0");
+        } else {
+            $("#tagTopic").css("display", "none").val("0");
+            $("#tagSearch").css("display", "none").val("");
+        }
+    }
 
+    function topicChange() {
+        console.log("topic");
+        if ($('#tagTopic')[0].options[$('#tagTopic')[0].options.selectedIndex].value != "0") {
+            $("#tagSearch").css("display", "block").val("");
+        } else {
+            $("#tagSearch").css("display", "none").val("");
+        }
+    }
+</script>
 
 <table class = "searchStyle tabPage search">
     <tr>
         <td>
             <input id ="tagQuantity" type="text" placeholder="Quantity of Questions">
+        </td>
+        <td>
+            <select name="Question Type" id="tagType">
+                <option value="1" selected>Question Type</option>
+                <option value="1">Multiple choice</option>
+                <option value="2">Fill in the blank</option>
+                <option value="3">Coding</option>
+            </select>
         </td>
         <td>
             <select name="Difficulty Level" id="tagDifficulty">
@@ -100,28 +136,39 @@ Search
                 <option value="8">8</option>
                 <option value="9">9</option>
                 <option value="10">10</option>
-                </select>
-            <!--<input id ="tagDifficulty" type="text" placeholder="Difficulty (0-10)"> -->
-        </td>
-        <td>
-
-            <select name="tagFilter" id="tagFilter">
-                <!--TODO later. support other tag filters in get_questions_with
-                <option value = "units" selected="selected">Unit</option>
-                <option value = "unit_slos">Unit SLO</option>
-                <option value = "skills">Skill</option>
-                -->
-                <option value = "skill_slos">Skill SLO</option>
             </select>
         </td>
         <td>
-            <input id = "tagSearch" type = "text" placeholder="Tag">
+            <input id = "cognitiveLevel" type = "text" placeholder="Cognitive Level">
+        </td>
+        <td>
+            <select name="Unit" id="tagUnit" onchange="unitChange()">
+                <option value="0" selected>Unit</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </td>
+        <td>
+            <select name="Topic" id="tagTopic" onchange="topicChange()" style="display: none">
+                <option value="0" selected>Topic</option>
+                <option value="1">Topic 1</option>
+                <option value="2">Topic 2</option>
+                <option value="3">Topic 3</option>
+            </select>
+        </td>
+        <td>
+            <input id = "tagSearch" type = "text" placeholder="Skill SLO" style="display: none"><!--Searchable dropdown todo here-->
         </td>
         <td>
             <button id="addTag" onclick="updateRestrictions()" class="tabHover">Add Tag</button>
-        </td>
-        <td>
-            <button id="exportExam" onclick="exportTemplate()" class="tabHover">Export Template</button>
         </td>
     </tr>
 
@@ -149,22 +196,20 @@ Search
     var span = document.getElementsByClassName("close")[0];
     btn.onclick = function(){modal.style.display = "block";}
     span.onclick = function(){
-    modal.style.display = "none";
+        modal.style.display = "none";
     }
     window.onclick = function(evt){
-    if(evt.target ==modal){
-    modal.style.display = "none";
-    }
+        if(evt.target ==modal){
+            modal.style.display = "none";
+        }
     }
 </script>
 
 <script>
 
-<!-- This is the function that controls the auto-complete -->
-
 $("#tagSearch").keyup(function() {
     var searchtext = $("#tagSearch").val();
-    var tagfilter = $("#tagFilter").val();
+    var tagfilter = "skill_slos";
     $.ajax({
       url: "/getTagsFromDB",
       type: "POST",
