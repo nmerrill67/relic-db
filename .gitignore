@@ -50,3 +50,10 @@ docs/_build/
 
 # virtualenv dir
 vpython
+
+# VIM swp files
+*.swp
+
+# IDE stuff
+.idea
+.vscode
