@@ -22,10 +22,22 @@ function addRestriction(table, tagLevel, tagText, tagQuantity, tagDifficulty, is
     tagQuantityLabel.appendChild(tagQuantityLabelText);
     tagQuantityCell.appendChild(tagQuantityLabel);
 
+    // TODO
+    // Add similar code here for the "Question Type" so it gets print out when you hit "add tag".
+
     var tagDifficultyLabel = document.createElement("label");
     var tagDifficultyLabelText = document.createTextNode( "Level " + tagDifficulty + " Difficulty");
     tagDifficultyLabel.appendChild(tagDifficultyLabelText);
     tagDifficultyCell.appendChild(tagDifficultyLabel);
+
+    // TODO
+    // Add similar code here for the "Cognitive Level" so it gets print out wheny ou hit "add tag".
+
+    // TODO
+    // Add similar code here for the "Unit" so it gets print out wheny ou hit "add tag".
+
+    // TODO
+    // Add similar code here for the "Topic" so it gets print out wheny ou hit "add tag".
 
     var tagLevelLabel = document.createElement("label");
     var tagLevelLabelText = document.createTextNode("("+ tagLevel +")");
@@ -65,6 +77,8 @@ function addRestriction(table, tagLevel, tagText, tagQuantity, tagDifficulty, is
 };
 
 function updateRestrictions(){
+    // TODO
+    // Needs variables for Cog-Level, Unit, and Topic
     var table = document.getElementById("tagRequirements");
     var tagLevel = $("#tagFilter").val();
     var tagText = $("#tagSearch").val();
@@ -73,15 +87,20 @@ function updateRestrictions(){
     var isCreatingExamTemplate  = $("#searchFormat").val() == "examTemplate";
 
     if(tagText.length == 0 ){//just a simple user case check to not add empty strings
-        alert("check tag description");
+        alert("Please enter an SLO!");
         return;
     }
     if(tagQuantity.length == 0 && isCreatingExamTemplate){
-        alert("check quantity of questions");
+        alert("Please enter a quantity!");
         return;
     }
+
+    // TODO
+    // Needs a check to see if Cognitive level and unit/topic are not empty
+    // and needs to have an alert. Code wil; be similar to the ones around here.
+
     if(tagDifficulty.length == 0){
-        alert("check quantity of questions");
+        alert("Please enter a difficulty!");
         return;
     }
 
