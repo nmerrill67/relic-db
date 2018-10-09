@@ -44,13 +44,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 </style>
 <head>
-<meta charset="UTF-8">
-<title>Relic</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <meta charset="UTF-8">
+  <title>Relic</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='dropdown/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='dropdown/prism.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='dropdown/chosen.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../static/js/ajaxForAutocomplete.js"></script>
-    <script src="../static/js/createQuestionBoxes.js"></script>
-    <script src= "../static/js/searchTags.js"></script>
+  <script src="../static/js/ajaxForAutocomplete.js"></script>
+  <script src="../static/js/createQuestionBoxes.js"></script>
+  <script src= "../static/js/searchTags.js"></script>
+  <script src="../static/dropdown/jquery-3.2.1.min.js"></script>
+  <script src="../static/dropdown/chosen.jquery.js"></script>
+  <script src="../static/dropdown/prism.js"></script>
+  <script src="../static/dropdown/init.js"></script>
+
     <script>
         var restrictions = [];
         var questionRestrictions = []
@@ -63,7 +74,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <body>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 <div class="sideBlue">
 </div>
 
@@ -165,7 +175,38 @@ Search
             </select>
         </td>
         <td>
-            <input id = "tagSearch" type = "text" placeholder="Skill SLO" style="display: none"><!--Searchable dropdown todo here-->
+          <div>
+            <select data-placeholder="Chose an SLO" class="chosen-select" tabinxed="-1">
+              <option value=""></option>
+              <option value="United States">United States</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Aland Islands">Aland Islands</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Canada">Canada</option>
+              <option value="Cape Verde">Cape Verde</option>
+              <option value="Cayman Islands">Cayman Islands</option>
+              <option value="Central African Republic">Central African Republic</option>
+              <option value="Chad">Chad</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Christmas Island">Christmas Island</option>
+              <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo">Congo</option>
+              <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+              <option value="Cook Islands">Cook Islands</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cote D&apos;ivoire">Cote D'ivoire</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Curacao">Curacao</option>
+            </select>
+          </div>
         </td>
         <td>
             <button id="addTag" onclick="updateRestrictions()" class="tabHover">Add Tag</button>
@@ -203,31 +244,10 @@ Search
             modal.style.display = "none";
         }
     }
-</script>
-
-<script>
-
-$("#tagSearch").keyup(function() {
-    var searchtext = $("#tagSearch").val();
-    var tagfilter = "skill_slos";
-    $.ajax({
-      url: "/getTagsFromDB",
-      type: "POST",
-      data: JSON.stringify({"tag_level":tagfilter, "search_text":searchtext}),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      success: function(result) {
-          $("#tagSearch" ).autocomplete({source:result["tags"]});
-      },
-      failure: function(errMsg) {
-                alert(errMsg);
-            }
-    })
-  });
-</script>
-
+  </script>
+  <!-- This is where we invoke our autocomplete. -->
+  <script>
+    $(".chosen-select").chosen()
+  </script>
 </body>
-
-
-
 </html>
