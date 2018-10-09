@@ -47,3 +47,6 @@ vcs.xml
 
 # Sphinx documentation
 docs/_build/
+
+# virtualenv dir
+vpython
