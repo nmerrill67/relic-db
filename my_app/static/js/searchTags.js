@@ -82,8 +82,8 @@ function updateRestrictions(){
     var table = document.getElementById("tagRequirements");
     var tagLevel = $("#tagFilter").val();
     var tagText = $("#tagSearch").val();
-    var tagQuantity = $("#tagQuantity").val()
-    var tagDifficulty = $("#tagDifficulty").val()
+    var tagQuantity = $("#tagQuantity").val();
+    var tagDifficulty = $("#tagDifficulty").val();
     var isCreatingExamTemplate  = $("#searchFormat").val() == "examTemplate";
 
     if(tagText.length == 0 ){//just a simple user case check to not add empty strings
