@@ -247,6 +247,118 @@ Search
            <pre class = "searchStyle tabPage search" id="tagPossibilities"></pre>
         </div><!--The text of all the tags -->
 </div>
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Add Question</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Add/import</h2>
+      </header>
+      
+      <div class="w3-container">
+       <button class="w3-button w3-block w3-orange w3-section w3-padding" type="submit">Import Question</button>
+      <form class="w3-container" action="/action_page.php">
+        <div class="w3-section">
+     
+          <label><b>Question type:</b></label>
+          <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Types</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Multiple Choice</a>
+      <a href="#" class="w3-bar-item w3-button">Fill in the blank</a>
+      <a href="#" class="w3-bar-item w3-button">Coding</a>
+    </div>
+  </div>
+</div>
+          
+           <label><b>Question:</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your question" name="usrname" required>
+          
+          <label><b>Question answer:</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your answer" name="usrname" required>
+          
+          
+          
+          <label><b>Question difficulty:</b></label>
+          <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Level</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Easy</a>
+      <a href="#" class="w3-bar-item w3-button">Medium</a>
+      <a href="#" class="w3-bar-item w3-button">Hard</a>
+    </div>
+  </div>
+  <br />
+           <label><b>Question cognitive level:</b></label>
+           <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Level</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button">2</a>
+      <a href="#" class="w3-bar-item w3-button">3</a>
+    </div>
+  </div>
+          <br />
+              <label><b>Question unit:</b></label>
+           <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Unit</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Syllabus/Intro</a>
+      <a href="#" class="w3-bar-item w3-button">Python Data</a>
+      <a href="#" class="w3-bar-item w3-button">Functions</a>
+       <a href="#" class="w3-bar-item w3-button">Selection</a>
+      <a href="#" class="w3-bar-item w3-button">Iteration</a>
+      <a href="#" class="w3-bar-item w3-button">Iterables</a>
+    </div>
+  </div>
+          <br />
+           <label><b>Question topic:</b></label>
+         <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Topic</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Unit 1</a>
+      <a href="#" class="w3-bar-item w3-button">Unit 2</a>
+      <a href="#" class="w3-bar-item w3-button">Unit 3</a>
+    </div>
+  </div>
+          <br />
+          
+          <label><b>Question SLO:</b></label>
+         <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">SLO</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">USA</a>
+    </div>
+  </div>
+          <br />
+          
+          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Add Question</button>
+        </div>
+      </form>
+      </div>
+      <footer class="w3-container w3-teal">
+      </footer>
+    </div>
+  </div>
+</div>
+          
+</body>
+</html>
+
+
+
+
 <script>
     var modal=document.getElementById('myModal');
     var btn =document.getElementById("myBtn");
