@@ -217,7 +217,24 @@ function exportTemplate(){
                     alert(errMsg);
                 }
         });
+}
 
+function testGet() {
+    console.log("Doing GET request from http://rdotts.mynetgear.com:3000/questions/ ...");
+    $.ajax({
+        url: "http://rdotts.mynetgear.com:3000/questions/",
+        type: "GET",
+        contentType: "text/plain",
+        success: function(result) {
+                result.forEach(function(element) {
+                    console.log("found question: " + element["_id"] + " of difficulty " + element["difficulty"] + " of type " + element["question_type"] + ": " + element["question_text"]);
+                });
+
+        },
+        failure: function(errMsg) {
+                    alert(errMsg);
+                }
+        });
 }
 
 function importQuestionsIntoServer()
