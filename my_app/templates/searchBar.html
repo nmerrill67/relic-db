@@ -110,6 +110,24 @@ Search
         }
     }
 
+    function specificTopics(value){
+    if ($('#tagUnit')[0].options[$('#tagUnit')[0].options.selectedIndex].value == "Syllabus/Introduction"){
+        document.getElementById('tagTopic').style.display = "none";
+        document.getElementById('tagTopic_syllabus').style.display = "block";
+    } // if
+
+
+    if ($('#tagUnit')[0].options[$('#tagUnit')[0].options.selectedIndex].value == "Simple Python Data"){
+        document.getElementById('tagTopic').style.display = "none";
+        document.getElementById('tagTopic_python').style.display = "block";
+    } // if
+
+
+
+    }
+
+
+
     function topicChange() {
         console.log("topic");
         if ($('#tagTopic')[0].options[$('#tagTopic')[0].options.selectedIndex].value != "0") {
@@ -165,7 +183,7 @@ Search
         </td>
         <td>
             <select name="Unit" style="font-size:10px;" id="tagUnit" onchange="unitChange()">
-                <option value ="Unit"selected>Unit</option>
+                <option value =""selected>Unit</option>
                 <option value="Syllabus/Introduction">Syllabus/Introduction</option>
                 <option value="Simple Python Data">Simple Python Data</option>
                 <option value="Functions">Functions</option>
@@ -181,18 +199,133 @@ Search
             </select>
         </td>
         <td>
+            <!-- These are used in the function specifcTopic() -->
             <select name="Topic" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
-                <option value="0" selected>Topic</option>
-                <option value="1">Topic 1</option>
-                <option value="2">Topic 2</option>
-                <option value="3">Topic 3</option>
+                    <option value="" selected>Topic</option>
+                    <option value="1">Syllabus/Expectations</option>
+                    <option value="2">what is a program</option>
+                    <option value="3">programming language vs natural language</option>
+                    <option value="4">Algorithm vs Program</option>
+                    <option value="5">Binary</option>
+                </select>
+
+
+
+
+            <select name="Topic_syllabus" id="tagTopic_syllabus" onchange="topicChange()" style="display: none; font-size:10px;">
+                <option value="" selected>Syllabus Topics</option>
+                <option value="1">Syllabus/Expectations</option>
+                <option value="2">what is a program</option>
+                <option value="3">programming language vs natural language</option>
+                <option value="4">Algorithm vs Program</option>
+                <option value="5">Binary</option>
             </select>
+
+            <select name="Topic_python" id="tagTopic_python" onchange="topicChange()" style="display: none; font-size:10px;">
+                <option value="" selected>Topic</option>
+                <option value="1">Operators</option>
+                <option value="2">Variables</option>
+                <option value="3">Expressions</option>
+                <option value="4">Data Types</option>
+                <option value="5">Print Function</option>
+            </select>
+
+            <select name="Topic_functions" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                <option value="" selected>Topic</option>
+                <option value="1">Syllabus/Expectations</option>
+                <option value="2">what is a program</option>
+                <option value="3">programming language vs natural language</option>
+                <option value="4">Algorithm vs Program</option>
+                <option value="5">Binary</option>
+            </select>
+
+            <select name="Topic_selection" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                <option value="" selected>Topic</option>
+                <option value="1">Syllabus/Expectations</option>
+                <option value="2">what is a program</option>
+                <option value="3">programming language vs natural language</option>
+                <option value="4">Algorithm vs Program</option>
+                <option value="5">Binary</option>
+            </select>
+
+            <select name="Topic_iteration" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                <option value="" selected>Topic</option>
+                <option value="1">Syllabus/Expectations</option>
+                <option value="2">what is a program</option>
+                <option value="3">programming language vs natural language</option>
+                <option value="4">Algorithm vs Program</option>
+                <option value="5">Binary</option>
+            </select>
+
+            <select name="Topic_project1" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                <option value="" selected>Topic</option>
+                <option value="1">Syllabus/Expectations</option>
+                <option value="2">what is a program</option>
+                <option value="3">programming language vs natural language</option>
+                <option value="4">Algorithm vs Program</option>
+                <option value="5">Binary</option>
+            </select>
+
+            <select name="Topic_iterables" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                <option value="" selected>Topic</option>
+                <option value="1">Syllabus/Expectations</option>
+                <option value="2">what is a program</option>
+                <option value="3">programming language vs natural language</option>
+                <option value="4">Algorithm vs Program</option>
+                <option value="5">Binary</option>
+            </select>
+
+            <select name="Topic_fileIO" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                <option value="" selected>Topic</option>
+                <option value="1">Syllabus/Expectations</option>
+                <option value="2">what is a program</option>
+                <option value="3">programming language vs natural language</option>
+                <option value="4">Algorithm vs Program</option>
+                <option value="5">Binary</option>
+            </select>
+
+            <select name="Topic_project2" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                <option value="" selected>Topic</option>
+                <option value="1">Syllabus/Expectations</option>
+                <option value="2">what is a program</option>
+                <option value="3">programming language vs natural language</option>
+                <option value="4">Algorithm vs Program</option>
+                <option value="5">Binary</option>
+            </select>
+
+            <select name="Topic_classes" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                    <option value="" selected>Topic</option>
+                    <option value="1">Syllabus/Expectations</option>
+                    <option value="2">what is a program</option>
+                    <option value="3">programming language vs natural language</option>
+                    <option value="4">Algorithm vs Program</option>
+                    <option value="5">Binary</option>
+                </select>
+
+                <select name="Topic_matlab" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                        <option value="" selected>Topic</option>
+                        <option value="1">Syllabus/Expectations</option>
+                        <option value="2">what is a program</option>
+                        <option value="3">programming language vs natural language</option>
+                        <option value="4">Algorithm vs Program</option>
+                        <option value="5">Binary</option>
+                    </select>
+
+                    <select name="Topic_searching" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                            <option value="" selected>Topic</option>
+                            <option value="1">Syllabus/Expectations</option>
+                            <option value="2">what is a program</option>
+                            <option value="3">programming language vs natural language</option>
+                            <option value="4">Algorithm vs Program</option>
+                            <option value="5">Binary</option>
+                        </select>
+
         </td>
         <td>
           <div>
             <select data-placeholder="Chose an SLO" class="chosen-select" tabinxed="-1">
               <option value=""></option>
-              <option value="United States">United States</option>
+              <option value="United States">Write algorithm for solving simple mathematical problems</option>
               <option value="United Kingdom">United Kingdom</option>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Aland Islands">Aland Islands</option>
