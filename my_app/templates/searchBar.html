@@ -104,26 +104,27 @@ Search
         console.log("unit");
         if ($('#tagUnit')[0].options[$('#tagUnit')[0].options.selectedIndex].value != "0") {
             $("#tagTopic").css("display", "block").val("0");
-        } else {
+        } 
+        
+
+        // Changes the dropdown based on what unit you're in.
+        if ($("#tagUnit").val()=="Simple Python Data") {
+        $("#tagTopic_python").show();
+        $("#tagTopic").hide(); 
+            }
+
+        if ($("#tagUnit").val()=="Functions") {
+        $("#tagTopic_python").show();
+        $("#tagTopic").hide(); 
+            }
+
+
+
+        
+        else {
             $("#tagTopic").css("display", "none").val("0");
             $("#tagSearch").css("display", "none").val("");
         }
-    }
-
-    function specificTopics(value){
-    if ($('#tagUnit')[0].options[$('#tagUnit')[0].options.selectedIndex].value == "Syllabus/Introduction"){
-        document.getElementById('tagTopic').style.display = "none";
-        document.getElementById('tagTopic_syllabus').style.display = "block";
-    } // if
-
-
-    if ($('#tagUnit')[0].options[$('#tagUnit')[0].options.selectedIndex].value == "Simple Python Data"){
-        document.getElementById('tagTopic').style.display = "none";
-        document.getElementById('tagTopic_python').style.display = "block";
-    } // if
-
-
-
     }
 
 
@@ -228,6 +229,8 @@ Search
                 <option value="3">Expressions</option>
                 <option value="4">Data Types</option>
                 <option value="5">Print Function</option>
+                <option value="6">Input Function</option>
+                <option value="7">Error Messages</option>
             </select>
 
             <select name="Topic_functions" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
