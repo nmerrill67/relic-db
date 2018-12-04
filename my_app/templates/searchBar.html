@@ -111,15 +111,167 @@ Search
         if ($("#tagUnit").val()=="Simple Python Data") {
         $("#tagTopic_python").show();
         $("#tagTopic").hide(); 
-            }
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
 
         if ($("#tagUnit").val()=="Functions") {
-        $("#tagTopic_python").show();
+        $("#tagTopic_functions").show();
         $("#tagTopic").hide(); 
-            }
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
 
+        if ($("#tagUnit").val()=="Selection") {
+        $("#tagTopic_selection").show();
+        $("#tagTopic").hide(); 
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
 
+        if ($("#tagUnit").val()=="Iteration") {
+        $("#tagTopic_iteration").show();
+        $("#tagTopic").hide(); 
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
 
+        if ($("#tagUnit").val()=="Project #1 Discussion") {
+        $("#tagTopic_project1").show();
+        $("#tagTopic").hide(); 
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
+
+        if ($("#tagUnit").val()=="Iterables") {
+        $("#tagTopic_iterables").show();
+        $("#tagTopic").hide(); 
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        } 
+
+        if ($("#tagUnit").val()=="File I/O") {
+        $("#tagTopic_fileIO").show();
+        $("#tagTopic").hide(); 
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
+
+        if ($("#tagUnit").val()=="Project #2 Discussion") {
+        $("#tagTopic_project2").show();
+        $("#tagTopic").hide(); 
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
+
+        if ($("#tagUnit").val()=="Classes/Objects") {
+        $("#tagTopic_classes").show();
+        $("#tagTopic").hide();
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
+
+        if ($("#tagUnit").val()=="MATLAB") {
+        $("#tagTopic_matlab").show();
+        $("#tagTopic").hide();
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
+
+        if ($("#tagUnit").val()=="Searching/Sorting/Algorithm Analysis") {
+        $("#tagTopic_searching").show();
+        $("#tagTopic").hide();
+        $("#tagTopic_python").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        }
         
         else {
             $("#tagTopic").css("display", "none").val("0");
@@ -231,96 +383,75 @@ Search
                 <option value="5">Print Function</option>
                 <option value="6">Input Function</option>
                 <option value="7">Error Messages</option>
+                <option value="8">Debugging</option>
+                <option value="9">Comments</option>
             </select>
 
-            <select name="Topic_functions" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+            <select name="Topic_functions" id="tagTopic_functions" onchange="topicChange()" style="display: none; font-size:10px;">
                 <option value="" selected>Topic</option>
-                <option value="1">Syllabus/Expectations</option>
-                <option value="2">what is a program</option>
-                <option value="3">programming language vs natural language</option>
-                <option value="4">Algorithm vs Program</option>
-                <option value="5">Binary</option>
+                <option value="1">Using Functions</option>
+                <option value="2">User Defined Functions</option>
+                <option value="3">Design Recipe</option>
+                <option value="4">Returning Multiple</option>
+                <option value="5">Modularity</option>
+                <option value="6">Debugging Functions</option>
+                <option value="7">Error Messages</option>
             </select>
 
-            <select name="Topic_selection" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+            <select name="Topic_selection" id="tagTopic_selection" onchange="topicChange()" style="display: none; font-size:10px;">
                 <option value="" selected>Topic</option>
-                <option value="1">Syllabus/Expectations</option>
-                <option value="2">what is a program</option>
-                <option value="3">programming language vs natural language</option>
-                <option value="4">Algorithm vs Program</option>
-                <option value="5">Binary</option>
+                <option value="1">Branching</option>
+                <option value="2">Boolean</option>
+                <option value="3">Logical Operators</option>
+                <option value="4">Debugging Statements</option>
+                <option value="5">Error Messages</option>
             </select>
 
-            <select name="Topic_iteration" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+            <select name="Topic_iteration" id="tagTopic_iteration" onchange="topicChange()" style="display: none; font-size:10px;">
                 <option value="" selected>Topic</option>
-                <option value="1">Syllabus/Expectations</option>
-                <option value="2">what is a program</option>
-                <option value="3">programming language vs natural language</option>
-                <option value="4">Algorithm vs Program</option>
-                <option value="5">Binary</option>
+                <option value="1">While Loops</option>
+                <option value="2">Accumulation</option>
+                <option value="3">Debugging Loops</option>
+                <option value="4">Error Messages</option>
             </select>
 
-            <select name="Topic_project1" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+            <select name="Topic_project1" id="tagTopic_project1" onchange="topicChange()" style="display: none; font-size:10px;">
                 <option value="" selected>Topic</option>
-                <option value="1">Syllabus/Expectations</option>
-                <option value="2">what is a program</option>
-                <option value="3">programming language vs natural language</option>
-                <option value="4">Algorithm vs Program</option>
-                <option value="5">Binary</option>
+                <option value="1">Returning Multiple</option>
             </select>
 
-            <select name="Topic_iterables" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+            <select name="Topic_iterables" id="tagTopic_iterables" onchange="topicChange()" style="display: none; font-size:10px;">
                 <option value="" selected>Topic</option>
-                <option value="1">Syllabus/Expectations</option>
-                <option value="2">what is a program</option>
-                <option value="3">programming language vs natural language</option>
-                <option value="4">Algorithm vs Program</option>
-                <option value="5">Binary</option>
+                <option value="1">Lists</option>
+                <option value="2">Tuples</option>
+                <option value="3">Strings</option>
             </select>
 
-            <select name="Topic_fileIO" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+            <select name="Topic_fileIO" id="tagTopic_fileIO" onchange="topicChange()" style="display: none; font-size:10px;">
                 <option value="" selected>Topic</option>
-                <option value="1">Syllabus/Expectations</option>
-                <option value="2">what is a program</option>
-                <option value="3">programming language vs natural language</option>
-                <option value="4">Algorithm vs Program</option>
-                <option value="5">Binary</option>
+                <option value="1">File Processing</option>
             </select>
 
-            <select name="Topic_project2" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+            <select name="Topic_project2" id="tagTopic_project2" onchange="topicChange()" style="display: none; font-size:10px;">
                 <option value="" selected>Topic</option>
-                <option value="1">Syllabus/Expectations</option>
-                <option value="2">what is a program</option>
-                <option value="3">programming language vs natural language</option>
-                <option value="4">Algorithm vs Program</option>
-                <option value="5">Binary</option>
+                <option value="1">Plotting</option>
+                <option value="2">Discussion</option>
             </select>
 
-            <select name="Topic_classes" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+            <select name="Topic_classes" id="tagTopic_classes" onchange="topicChange()" style="display: none; font-size:10px;">
                     <option value="" selected>Topic</option>
-                    <option value="1">Syllabus/Expectations</option>
-                    <option value="2">what is a program</option>
-                    <option value="3">programming language vs natural language</option>
-                    <option value="4">Algorithm vs Program</option>
-                    <option value="5">Binary</option>
+                    <option value="1">Classes</option>
                 </select>
 
-                <select name="Topic_matlab" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                <select name="Topic_matlab" id="tagTopic_matlab" onchange="topicChange()" style="display: none; font-size:10px;">
                         <option value="" selected>Topic</option>
-                        <option value="1">Syllabus/Expectations</option>
-                        <option value="2">what is a program</option>
-                        <option value="3">programming language vs natural language</option>
-                        <option value="4">Algorithm vs Program</option>
-                        <option value="5">Binary</option>
+                        <option value="1">Discussion</option>
                     </select>
 
-                    <select name="Topic_searching" id="tagTopic" onchange="topicChange()" style="display: none; font-size:10px;">
+                    <select name="Topic_searching" id="tagTopic_searching" onchange="topicChange()" style="display: none; font-size:10px;">
                             <option value="" selected>Topic</option>
-                            <option value="1">Syllabus/Expectations</option>
-                            <option value="2">what is a program</option>
-                            <option value="3">programming language vs natural language</option>
-                            <option value="4">Algorithm vs Program</option>
-                            <option value="5">Binary</option>
+                            <option value="1">Searching/Sorting/Recursion</option>
+                            <option value="2">Algorithm Analysis</option>
                         </select>
 
         </td>
