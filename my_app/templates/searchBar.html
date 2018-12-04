@@ -123,15 +123,11 @@ Search
         $("#tagTopic_searching").hide(); 
         }
 
-
-
-
         if ($("#tagUnit").val()=="Simple Python Data") {
         $("#tagTopic_python").show();
-        $("#slo_python").show();
-        $("#slo_syllabus").hide();
 
         $("#tagTopic").hide(); 
+        $("#tagTopic_syllabus").hide();
         $("#tagTopic_functions").hide(); 
         $("#tagTopic_selection").hide(); 
         $("#tagTopic_iteration").hide(); 
@@ -396,7 +392,7 @@ Search
             </select>
 
             <select name="Topic_python" id="tagTopic_python" onchange="topicChange()" style="display: none; font-size:10px;">
-                <option value="" selected>Topic</option>
+                <option value="" selected>Python Topics</option>
                 <option value="1">Operators</option>
                 <option value="2">Variables</option>
                 <option value="3">Expressions</option>
@@ -409,7 +405,7 @@ Search
             </select>
 
             <select name="Topic_functions" id="tagTopic_functions" onchange="topicChange()" style="display: none; font-size:10px;">
-                <option value="" selected>Topic</option>
+                <option value="" selected>Function Topics</option>
                 <option value="1">Using Functions</option>
                 <option value="2">User Defined Functions</option>
                 <option value="3">Design Recipe</option>
@@ -420,7 +416,7 @@ Search
             </select>
 
             <select name="Topic_selection" id="tagTopic_selection" onchange="topicChange()" style="display: none; font-size:10px;">
-                <option value="" selected>Topic</option>
+                <option value="" selected>Selection Topics</option>
                 <option value="1">Branching</option>
                 <option value="2">Boolean</option>
                 <option value="3">Logical Operators</option>
@@ -429,7 +425,7 @@ Search
             </select>
 
             <select name="Topic_iteration" id="tagTopic_iteration" onchange="topicChange()" style="display: none; font-size:10px;">
-                <option value="" selected>Topic</option>
+                <option value="" selected>Iteration Topics</option>
                 <option value="1">While Loops</option>
                 <option value="2">Accumulation</option>
                 <option value="3">Debugging Loops</option>
@@ -437,40 +433,40 @@ Search
             </select>
 
             <select name="Topic_project1" id="tagTopic_project1" onchange="topicChange()" style="display: none; font-size:10px;">
-                <option value="" selected>Topic</option>
+                <option value="" selected>Project 1 Topics</option>
                 <option value="1">Returning Multiple</option>
             </select>
 
             <select name="Topic_iterables" id="tagTopic_iterables" onchange="topicChange()" style="display: none; font-size:10px;">
-                <option value="" selected>Topic</option>
+                <option value="" selected>Iterable Topics</option>
                 <option value="1">Lists</option>
                 <option value="2">Tuples</option>
                 <option value="3">Strings</option>
             </select>
 
             <select name="Topic_fileIO" id="tagTopic_fileIO" onchange="topicChange()" style="display: none; font-size:10px;">
-                <option value="" selected>Topic</option>
+                <option value="" selected>File IO Topics</option>
                 <option value="1">File Processing</option>
             </select>
 
             <select name="Topic_project2" id="tagTopic_project2" onchange="topicChange()" style="display: none; font-size:10px;">
-                <option value="" selected>Topic</option>
+                <option value="" selected>Project 2 Topics</option>
                 <option value="1">Plotting</option>
                 <option value="2">Discussion</option>
             </select>
 
             <select name="Topic_classes" id="tagTopic_classes" onchange="topicChange()" style="display: none; font-size:10px;">
-                    <option value="" selected>Topic</option>
+                    <option value="" selected>Classes Topics</option>
                     <option value="1">Classes</option>
                 </select>
 
                 <select name="Topic_matlab" id="tagTopic_matlab" onchange="topicChange()" style="display: none; font-size:10px;">
-                        <option value="" selected>Topic</option>
+                        <option value="" selected>MatLab Topics</option>
                         <option value="1">Discussion</option>
                     </select>
 
                     <select name="Topic_searching" id="tagTopic_searching" onchange="topicChange()" style="display: none; font-size:10px;">
-                            <option value="" selected>Topic</option>
+                            <option value="" selected>Searching Topics</option>
                             <option value="1">Searching/Sorting/Recursion</option>
                             <option value="2">Algorithm Analysis</option>
                         </select>
