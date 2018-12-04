@@ -108,8 +108,29 @@ Search
         
 
         // Changes the dropdown based on what unit you're in.
+        if ($("#tagUnit").val()=="Syllabus/Introduction") {
+        $("#tagTopic_syllabus").show();
+        $("#tagTopic").hide(); 
+        $("#tagTopic_functions").hide(); 
+        $("#tagTopic_selection").hide(); 
+        $("#tagTopic_iteration").hide(); 
+        $("#tagTopic_project1").hide(); 
+        $("#tagTopic_iterables").hide(); 
+        $("#tagTopic_fileIO").hide(); 
+        $("#tagTopic_project2").hide(); 
+        $("#tagTopic_classes").hide(); 
+        $("#tagTopic_matlab").hide(); 
+        $("#tagTopic_searching").hide(); 
+        }
+
+
+
+
         if ($("#tagUnit").val()=="Simple Python Data") {
         $("#tagTopic_python").show();
+        $("#slo_python").show();
+        $("#slo_syllabus").hide();
+
         $("#tagTopic").hide(); 
         $("#tagTopic_functions").hide(); 
         $("#tagTopic_selection").hide(); 
@@ -457,36 +478,33 @@ Search
         </td>
         <td>
           <div>
-            <select data-placeholder="Chose an SLO" class="chosen-select" tabinxed="-1">
+            <select data-placeholder="Chose an SLO" class="chosen-select" id = "slo_syllabus"  tabinxed="-1">
               <option value=""></option>
-              <option value="United States">Write algorithm for solving simple mathematical problems</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="Afghanistan">Afghanistan</option>
-              <option value="Aland Islands">Aland Islands</option>
-              <option value="Albania">Albania</option>
-              <option value="Algeria">Algeria</option>
-              <option value="American Samoa">American Samoa</option>
-              <option value="Andorra">Andorra</option>
-              <option value="Canada">Canada</option>
-              <option value="Cape Verde">Cape Verde</option>
-              <option value="Cayman Islands">Cayman Islands</option>
-              <option value="Central African Republic">Central African Republic</option>
-              <option value="Chad">Chad</option>
-              <option value="Chile">Chile</option>
-              <option value="China">China</option>
-              <option value="Christmas Island">Christmas Island</option>
-              <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-              <option value="Colombia">Colombia</option>
-              <option value="Comoros">Comoros</option>
-              <option value="Congo">Congo</option>
-              <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
-              <option value="Cook Islands">Cook Islands</option>
-              <option value="Costa Rica">Costa Rica</option>
-              <option value="Cote D&apos;ivoire">Cote D'ivoire</option>
-              <option value="Croatia">Croatia</option>
-              <option value="Cuba">Cuba</option>
-              <option value="Curacao">Curacao</option>
             </select>
+
+            <select data-placeholder="Chose an SLO" class="chosen-select" id = "slo_python"  tabinxed="-1">
+                <option value=""></option>
+                <option value="Algorithms">Write algorithm for solving simple mathematical problems</option>
+                <option value="Algorithms">Understand the difference between an algorithm and a program</option>
+                <option value="Variables">Identify invalid variable names</option>
+                <option value="Variables">Choose meaningful variable names</option>
+                <option value="Data Types">Use type() to determine variable type</option>
+                <option value="Data Types">Use int(), float(), string() to cast - </option>
+                <option value="Data Types">Recognize data types without type() function.</option>
+                <option value="Operators">Evaluate expressions containing these operators</option>
+                <option value="Operators">Understand the difference beween floating point and integer division</option>
+                <option value="Operators">Convert a mathematical formula into a Python expression</option>
+                <option value="Statements">Assign a value to a variable</option>
+                <option value="Statements">'=' - understand assignment vs mathematical equals</option>
+                <option value="Statements">Determine the value of variables after sequence of assignment statements</option>
+                <option value="Input Function">Use input statement to retrieve float, int, string values from keyboard</option>
+                <option value="Print Function">Use print statements to display to user and debug/observe output</option>
+              </select>
+
+
+
+
+
           </div>
         </td>
         <td>
