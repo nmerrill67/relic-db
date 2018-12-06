@@ -3,6 +3,7 @@ import os
 
 #extract the files from MBZ backup, and store in folder VPL
 def extract_tar_file(source_file, output_directory):
+
     tar = tarfile.open(source_file)
     tar.extractall(path = output_directory)
     tar.close()

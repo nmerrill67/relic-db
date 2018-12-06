@@ -16,6 +16,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
+        float: right;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1837,6 +1838,7 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+        float: right;
 	}
 
 		input[type="submit"].icon,
@@ -1863,6 +1865,7 @@
 			display: block;
 			margin: 0 0 1em 0;
 			width: 100%;
+            float: right;
 		}
 
 		input[type="submit"].small,

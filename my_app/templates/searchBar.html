@@ -19,6 +19,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -66,7 +67,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
         var restrictions = [];
         var questionRestrictions = []
 
-        //var possibilities = {"units":[{"unit_name":"Simple Python Data","unit_SLO":"Write a script/program that asks a user for input values from the keyboard, performs a mathematical computation and displays the result to the screen.","topics":["operators","variables"],"skills":[{"skill_name":"algorithms","skill_slos":["write algorithm for solving simple mathematical problems","understand the difference between an algorithm and a program"]},{"skill_name":"operators","skill_slos":["evaluate expressions containing these operators","understand the difference between floating point and integer division","convert a mathematical formula into a Python expression"]}]}]};
         var possibilities = {"units": [{"skills": [{"skill_name": "algorithms", "skill_slos": ["write algorithm for solving simple mathematical problems", "understand the difference between an algorithm and a program"]}, {"skill_name": "variables", "skill_slos": ["identify invalid variable names", "choose meaningful variable names"]}, {"skill_name": "data types - float, int, string", "skill_slos": ["use type() to determine variable names", "use int(), float(), string() to case", "recognize data types without type() function"]}, {"skill_name": "operators +,-,*,/,**,//,%", "skill_slos": ["evaluate expressions containing these operators", "understand the difference between floating point and integer division", "convert a mathematical formula into a Python expression"]}, {"skill_name": "statements", "skill_slos": ["assign a value to a variable", "'=' - understand assignment vs mathematical equals", "determine the value of variables after sequence of assignment statements"]}, {"skill_name": "input function", "skill_slos": ["use input statement to retrieve float, int, string values from keyboard"]}, {"skill_name": "print function", "skill_slos": ["use print statements to display to user and debug/observe output"]}], "topics": ["OperatorsVariablesAssignment StatementsExpressionsData Types float, int, string (+,*)print function - including use for debugginginput functioninterpretting error messages: division by zero, data type mismatch, name errorDebuggingComments - How and When to Use them"], "unit_SLO": "Write a program that asks a user to enter the radius of a circle and computes and displays the area of the circle to the screen.", "unit_name": "Simple Python Data"}, {"skills": [{"skill_name": "modules/libraries (math)", "skill_slos": ["call functions from other modules", "use help function", "find existing Python libraries"]}, {"skill_name": "random module", "skill_slos": ["use random module functions to generate random values"]}, {"skill_name": "build-in functions", "skill_slos": ["call functions from Python Standard Library"]}, {"skill_name": "anatomy of function - header, parameters, body, return", "skill_slos": ["identify parts of a function"]}, {"skill_name": "design recipe", "skill_slos": ["use design receipe to develop functions and programs"]}, {"skill_name": "docstring", "skill_slos": ["know what the docstring is used for", "know how to write/read a docstring", "write a function using a docstring"]}, {"skill_name": "testing", "skill_slos": ["use asserts to test functions"]}, {"skill_name": "program composition", "skill_slos": ["develop programs using functions"]}, {"skill_name": "scope", "skill_slos": ["develop programs using functions"]}, {"skill_name": "flow of execution", "skill_slos": ["trace the flow of execution of a program containing functions"]}, {"skill_name": "print vs return", "skill_slos": ["know the difference between printing a value within a function and returning a value from a function"]}], "topics": ["Using Functions - modules/libraries", "User Defined Functions", "Design Recipe", "Returning multiple arguments from functions", "Modularity, program composition", "Debugging functions", "Interpretting error messages: name error, type error"], "unit_SLO": "Script/Program is solely comprised of user-defined functions and may call functions from libraries/modules as needed to solve the problem.", "unit_name": "Functions"}, {"skills": [{"skill_name": "while loop", "skill_slos": ["understand when to use a while loop vs a selection statement", "trace the flow of execution", "understand difference between indefinite and definite loops", "use a loop to solve a problem", "write a flowchart representing while loop problem"]}, {"skill_name": "while loop - validating input", "skill_slos": ["recall sentinel value", "write a loop to check for valid input"]}, {"skill_name": "while loop - accumulation", "skill_slos": ["solve a problem requiring an interative solution", "recall accumulation pattern"]}, {"skill_name": "indefinite loops", "skill_slos": ["recall definition of infinite loop", "identify/correct conditional expression to avoid infinite loop"]}, {"skill_name": "multiple return values from functions", "skill_slos": ["write a function that returns multiple return values", "call a function that returns multiple return values and assign the return values to variables"]}], "topics": ["While loops - (flow charts)", "Accumulatoin - (flow charts)", "Debugging loops and loop conditions", "Interpretting error messages"], "unit_SLO": "SLO2+Program includes conditional and repetitive execution flows", "unit_name": "Iteration"}, {"skills": [{"skill_name": "boolean values and expressions", "skill_slos": ["understand the difference between string iteral 'True' 'False' and boolean values True False"]}, {"skill_name": "equality operators ==,!=", "skill_slos": ["understand the difference between '=' and '=='", "understand danger of using '==' with float values"]}, {"skill_name": "relational operators <,<=,>,>=", "skill_slos": ["evaluate boolean expressions"]}, {"skill_name": "logical operators and, or, not", "skill_slos": ["evaluate boolean expressions containing logical operators", "write boolean expressions using equality, relational, logical operators", "be able to show that 'not (A and B)' is equivalent to 'not A or not B' and NOT equivalent to 'not A and not B'"]}, {"skill_name": "unary selection (if)", "skill_slos": ["trace the flow of execution of an if statement", "write if statements"]}, {"skill_name": "binary selection (if - else)", "skill_slos": ["trace the flow of execution of an if-else statement", "write if statements"]}, {"skill_name": "chained conditionals (if - elif)", "skill_slos": ["trace the flow of execution of chained conditionals", "write chained conditionals"]}], "topics": ["Branching (flowcharts)", "Boolean", "Logical Operators", "Debugging selection statements and boolean expressions", "Interpretting error messages"], "unit_SLO": "SLO2+Program includes conditional and repetitive execution flows", "unit_name": "Selection"}, {"skills": [{"skill_name": "list data type", "skill_slos": ["understand definition of sequential/collection data type", "understand elements can be different data types, including lists", "create lists including empty list (syntax for a list)"]}, {"skill_name": "len function", "skill_slos": ["use len function to return TOPMOST length"]}, {"skill_name": "indexing", "skill_slos": ["use indexing to access to elements in list including nested lists"]}, {"skill_name": "operators +,*", "skill_slos": ["know operands must both be lists for list concatenation using +", "evaluate expressions containing list concatenation using +", "know one operand must be a list and the other an int for list repetition using *", "evaluate expressions containing list repetition"]}, {"skill_name": "slicing", "skill_slos": ["know how to use slicing"]}, {"skill_name": "mutability", "skill_slos": ["understand definition - mutable"]}, {"skill_name": "del operator", "skill_slos": ["evaluate and write expressions using hte del operator with lists"]}, {"skill_name": "in operator (not in)", "skill_slos": ["evaluate and write expressions using del operator with lists", "understand in operator evaluates only TOPMOST list level"]}, {"skill_name": "aliasing vs cloning", "skill_slos": ["understand reference diagram for list objects", "identify statement/syntax that create an alias to a list", "identify statement/syntax that create a clone of a list", "understand the difference between an alias and a clone", "evaluate expressions using the 'is' operator"]}, {"skill_name": "built-in-list methods cover at least append and encourage students to look up other methods for their own use", "skill_slos": ["call and evaluate expressions using list methods"]}, {"skill_name": "iterate through elements to a list - this is where the for loop discussion could go", "skill_slos": ["write code using while loops to iterate and process elements of a list", "write code using for each loops to iterate a process elements of a list", "write code using indexes with range() function to iterate and process elements of a list using"]}, {"skill_name": "iterate using recursion", "skill_slos": ["identify recursive components of recursive functions (base case, recursive case)", "determining the relationship between the first element of a list with the rest of the list"]}, {"skill_name": "lists as parameters", "skill_slos": ["how lists are passed to functions", "understand difference between function with side effects and pure functions", "trace execution of functions that accept and/or return lists"]}, {"skill_name": "list as return value", "skill_slos": ["create a list within a function and the return list"]}, {"skill_name": "tuples", "skill_slos": ["create tuples (syntax for a list)", "use an assignment statement to unpack a tuple"]}, {"skill_name": "tuple - immutable", "skill_slos": ["understand how immutability affects tuples"]}, {"skill_name": "tuple as parameters and returns", "skill_slos": ["define functions using tuples as parameters and return value"]}, {"skill_name": "string data type", "skill_slos": ["recall string is a sequential/collection data type"]}, {"skill_name": "len function", "skill_slos": ["use use len function to return string length"]}, {"skill_name": "indexing with strings", "skill_slos": ["use indexing to access characters in a string"]}, {"skill_name": "string operators +,*", "skill_slos": ["know operands must both be strings for string concenation using +", "evaluate expressions containing string concatenation", "know one operand must be a string and the other an int for string repetition using *", "evaluate expressions containing string repetition"]}, {"skill_name": "string slicing", "skill_slos": ["know how to use slicing"]}, {"skill_name": "string - immutability", "skill_slos": ["understand how immutability affects strings"]}, {"skill_name": "ASCII", "skill_slos": [""]}, {"skill_name": "string comparison", "skill_slos": [""]}], "topics": ["Lists", "Tuples", "Strings"], "unit_SLO": "SLO3+organize data into appropriate data structures so that it can be effectively accessed and worked with to solve a problem.", "unit_name": "Iterables"}, {"skills": "", "topics": "File Processing - readline only", "unit_SLO": "", "unit_name": "File I/O"}, {"skills": "", "topics": ["Plotting (taught as part of lab/project and not in lecture)", "Project #2 Discussion"], "unit_SLO": "using visual representation of data to aid in analysis of data", "unit_name": "Project #2 Discussion"}, {"skills": "", "topics": "Classes - structs/methods", "unit_SLO": "", "unit_name": "Classes/Objects"}, {"skills": "", "topics": "MATALB & Project 3 Discussion", "unit_SLO": "", "unit_name": "MATLAB"}, {"skills": "", "topics": ["Searching/sorting/recursion", "Algorithm analysis"], "unit_SLO": "", "unit_name": "Searching/sorting/algorithm analysis"}]};
         $(document).ready(function(){updatePossibilities(possibilities)})
     </script>
@@ -77,13 +77,124 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <div class="sideBlue">
 </div>
 
-<button onclick = "chooseDisplay(this.id)" class = "tab searchTab tabHover" id = "search">
-Search
-</button>
+<div class="row">
+    <div class="column">
+        <button onclick = "chooseDisplay(this.id)"  class="w3-button w3-black" id = "search">
+        Search
+        </button>
+    </div>
 
+    <div class="column">
+        <button id ="myBtn"  class="w3-button w3-black" >Display Tags</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                   <span class="close">&times;</span>
+                   <pre class = "searchStyle tabPage search" id="tagPossibilities"></pre>
+                </div><!--The text of all the tags -->
+        </div>
+    </div>
 
-
-<button class = "searchStyle tabPage search"onclick = importQuestionsIntoServer()>Import Questions</button>
+    <div class="column">
+        <div class="w3-container">
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black clearFloat">Add Question</button>
+          <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-zoom w3-card-4">
+              <header class="w3-container w3-teal"> 
+                <span onclick="document.getElementById('id01').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                <h2>Add/import</h2>
+              </header>
+              
+              <div class="w3-container">
+               <input id='fileid' type='file' name='filename' hidden/>
+               <button id='buttonid' class="w3-button w3-block w3-orange w3-section w3-padding" onclick = importQuestionsIntoServer() type="file">Import Question</button>
+               <output id="list"></output>
+              <form class="w3-container" action="/action_page.php">
+                <div class="w3-section">
+             
+                  <label><b>Question type:</b></label>
+                  <div class="w3-dropdown-hover">
+            <button class="w3-button w3-black">Types</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="#" class="w3-bar-item w3-button">Multiple Choice</a>
+              <a href="#" class="w3-bar-item w3-button">Fill in the blank</a>
+              <a href="#" class="w3-bar-item w3-button">Coding</a>
+            </div>
+          </div>
+        </div>
+                  
+                   <label><b>Question:</b></label>
+                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your question" name="usrname" required>
+                  
+                  <label><b>Question answer:</b></label>
+                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your answer" name="usrname" required>
+                  
+                  
+                  
+                  <label><b>Question difficulty:</b></label>
+                  <div class="w3-dropdown-hover">
+            <button class="w3-button w3-black">Level</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="#" class="w3-bar-item w3-button">Easy</a>
+              <a href="#" class="w3-bar-item w3-button">Medium</a>
+              <a href="#" class="w3-bar-item w3-button">Hard</a>
+            </div>
+          </div>
+          <br />
+                   <label><b>Question cognitive level:</b></label>
+                   <div class="w3-dropdown-hover">
+            <button class="w3-button w3-black">Level</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="#" class="w3-bar-item w3-button">1</a>
+              <a href="#" class="w3-bar-item w3-button">2</a>
+              <a href="#" class="w3-bar-item w3-button">3</a>
+            </div>
+          </div>
+                  <br />
+                      <label><b>Question unit:</b></label>
+                   <div class="w3-dropdown-hover">
+            <button class="w3-button w3-black">Unit</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="#" class="w3-bar-item w3-button">Syllabus/Intro</a>
+              <a href="#" class="w3-bar-item w3-button">Python Data</a>
+              <a href="#" class="w3-bar-item w3-button">Functions</a>
+               <a href="#" class="w3-bar-item w3-button">Selection</a>
+              <a href="#" class="w3-bar-item w3-button">Iteration</a>
+              <a href="#" class="w3-bar-item w3-button">Iterables</a>
+            </div>
+          </div>
+                  <br />
+                   <label><b>Question topic:</b></label>
+                 <div class="w3-dropdown-hover">
+            <button class="w3-button w3-black">Topic</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="#" class="w3-bar-item w3-button">Unit 1</a>
+              <a href="#" class="w3-bar-item w3-button">Unit 2</a>
+              <a href="#" class="w3-bar-item w3-button">Unit 3</a>
+            </div>
+          </div>
+                  <br />
+                  
+                  <label><b>Question SLO:</b></label>
+                 <div class="w3-dropdown-hover">
+            <button class="w3-button w3-black">SLO</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="#" class="w3-bar-item w3-button">USA</a>
+            </div>
+          </div>
+                  <br />
+                  
+                  <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Add Question</button>
+                </div>
+              </form>
+              </div>
+              <footer class="w3-container w3-teal">
+              </footer>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
 
 <table style="margin-bottom: 0em">
     <tr>
@@ -528,14 +639,6 @@ Search
 
 <pre class = "searchStyle tabPage search" id="searchedQuestions"></pre>
 
-<label class = "searchStyle tabPage search"> Skill SLOs: </label>
-<button id ="myBtn">Display Tags</button>
-<div id="myModal" class="modal">
-    <div class="modal-content">
-           <span class="close">&times;</span>
-           <pre class = "searchStyle tabPage search" id="tagPossibilities"></pre>
-        </div><!--The text of all the tags -->
-</div>
 
 <!DOCTYPE html>
 <html>
@@ -544,103 +647,6 @@ Search
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
 
-<div class="w3-container">
-  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Add Question</button>
-
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-animate-zoom w3-card-4">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Add/import</h2>
-      </header>
-      
-      <div class="w3-container">
-       <button class="w3-button w3-block w3-orange w3-section w3-padding" type="submit">Import Question</button>
-      <form class="w3-container" action="/action_page.php">
-        <div class="w3-section">
-     
-          <label><b>Question type:</b></label>
-          <div class="w3-dropdown-hover">
-    <button class="w3-button w3-black">Types</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
-      <a href="#" class="w3-bar-item w3-button">Multiple Choice</a>
-      <a href="#" class="w3-bar-item w3-button">Fill in the blank</a>
-      <a href="#" class="w3-bar-item w3-button">Coding</a>
-    </div>
-  </div>
-</div>
-          
-           <label><b>Question:</b></label>
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your question" name="usrname" required>
-          
-          <label><b>Question answer:</b></label>
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your answer" name="usrname" required>
-          
-          
-          
-          <label><b>Question difficulty:</b></label>
-          <div class="w3-dropdown-hover">
-    <button class="w3-button w3-black">Level</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
-      <a href="#" class="w3-bar-item w3-button">Easy</a>
-      <a href="#" class="w3-bar-item w3-button">Medium</a>
-      <a href="#" class="w3-bar-item w3-button">Hard</a>
-    </div>
-  </div>
-  <br />
-           <label><b>Question cognitive level:</b></label>
-           <div class="w3-dropdown-hover">
-    <button class="w3-button w3-black">Level</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
-      <a href="#" class="w3-bar-item w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button">2</a>
-      <a href="#" class="w3-bar-item w3-button">3</a>
-    </div>
-  </div>
-          <br />
-              <label><b>Question unit:</b></label>
-           <div class="w3-dropdown-hover">
-    <button class="w3-button w3-black">Unit</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
-      <a href="#" class="w3-bar-item w3-button">Syllabus/Intro</a>
-      <a href="#" class="w3-bar-item w3-button">Python Data</a>
-      <a href="#" class="w3-bar-item w3-button">Functions</a>
-       <a href="#" class="w3-bar-item w3-button">Selection</a>
-      <a href="#" class="w3-bar-item w3-button">Iteration</a>
-      <a href="#" class="w3-bar-item w3-button">Iterables</a>
-    </div>
-  </div>
-          <br />
-           <label><b>Question topic:</b></label>
-         <div class="w3-dropdown-hover">
-    <button class="w3-button w3-black">Topic</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
-      <a href="#" class="w3-bar-item w3-button">Unit 1</a>
-      <a href="#" class="w3-bar-item w3-button">Unit 2</a>
-      <a href="#" class="w3-bar-item w3-button">Unit 3</a>
-    </div>
-  </div>
-          <br />
-          
-          <label><b>Question SLO:</b></label>
-         <div class="w3-dropdown-hover">
-    <button class="w3-button w3-black">SLO</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
-      <a href="#" class="w3-bar-item w3-button">USA</a>
-    </div>
-  </div>
-          <br />
-          
-          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Add Question</button>
-        </div>
-      </form>
-      </div>
-      <footer class="w3-container w3-teal">
-      </footer>
-    </div>
-  </div>
-</div>
           
 </body>
 </html>
