@@ -106,9 +106,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
               </header>
               
               <div class="w3-container">
-               <input id='fileid' type='file' name='filename' hidden/>
-               <button id='buttonid' class="w3-button w3-block w3-orange w3-section w3-padding" onclick = importQuestionsIntoServer() type="file">Import Question</button>
-               <output id="list"></output>
+               <input id="fileid" type="file" onchange=handleFiles(this.files) name='filename' hidden/>
+               <button id='buttonid' class="w3-button w3-block w3-orange w3-section w3-padding" onclick = importQuestionsIntoServer() onchange=handleFiles(this.files) type="file">Import Question</button>
               <form class="w3-container" action="/action_page.php">
                 <div class="w3-section">
              
