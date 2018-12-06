@@ -79,39 +79,27 @@ function addRestriction(table, tagLevel, tagText, tagQuantity, tagDifficulty, is
 function updateRestrictions(){
     // TODO
     // Needs variables for Cog-Level, Unit, and Topic
-    var table = document.getElementById("tagRequirements");
-    var tagLevel = $("#tagFilter").val();
-    var tagText = $("#tagSearch").val();
     var tagQuantity = $("#tagQuantity").val();
+    var tagType = $("#tagType").val();
     var tagDifficulty = $("#tagDifficulty").val();
-    var isCreatingExamTemplate  = $("#searchFormat").val() == "examTemplate";
+    var cognitiveLevel = $("#cognitiveLevel").val();
+    var tagUnit = $("#tagUnit").val();
 
-    if(tagText.length == 0 ){//just a simple user case check to not add empty strings
-        alert("Please enter an SLO!");
-        return;
-    }
-    if(tagQuantity.length == 0 && isCreatingExamTemplate){
-        alert("Please enter a quantity!");
-        return;
-    }
+    $("#tagQuantity").val("");
+    $("#tagType").val("");
+    $("#tagDifficulty").val("");
+    $("#cognitiveLevel").val("");
+    $("#tagUnit").val("");
 
-    // TODO
-    // Needs a check to see if Cognitive level and unit/topic are not empty
-    // and needs to have an alert. Code wil; be similar to the ones around here.
+    var json = {quantity: tagQuantity, type: tagType, difficulty: tagDifficulty, cognitive_level: cognitiveLevel, unit: tagUnit};
 
-    if(tagDifficulty.length == 0){
-        alert("Please enter a difficulty!");
-        return;
-    }
-
-     $("#tagSearch").val("");//reset text after submission. =)
-     $("#tagQuantity").val("")
-     $("#tagDifficulty").val("")
-
-    addRestriction(table, tagLevel, tagText, tagQuantity, tagDifficulty, isCreatingExamTemplate);
+    //addRestriction(table, tagLevel, tagText, tagQuantity, tagDifficulty, isCreatingExamTemplate);
     //add restriction
 
-    updateDisplayedQuestions();
+    //updateDisplayedQuestions();
+
+
+    $("<p>" + JSON.stringify(json) + "</p>").insertAfter("#examData");
 };
 
 function updateDisplayedQuestions(){
