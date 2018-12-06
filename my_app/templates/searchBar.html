@@ -79,13 +79,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <div class="row">
     <div class="column">
-        <button onclick = "chooseDisplay(this.id)"  class="w3-button w3-black" id = "search">
+        <button onclick = "chooseDisplay(this.id)"  class="tabHover" id = "search">
         Search
         </button>
     </div>
 
     <div class="column">
-        <button id ="myBtn"  class="w3-button w3-black" >Display Tags</button>
+        <button id ="myBtn"  class="tabHover" >Display Tags</button>
         <div id="myModal" class="modal">
             <div class="modal-content">
                    <span class="close">&times;</span>
@@ -96,7 +96,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     <div class="column">
         <div class="w3-container">
-          <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black clearFloat">Add Question</button>
+          <button onclick="document.getElementById('id01').style.display='block'" class="tabHover">Add Question</button>
           <div id="id01" class="w3-modal">
             <div class="w3-modal-content w3-animate-zoom w3-card-4">
               <header class="w3-container w3-teal"> 
@@ -632,7 +632,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <a class = "searchStyle tabPage search" id = "downloadLink" href = "/return-files/" style = "visibility:hidden" >Download Exam ZIP</a>
 
 
-<button id="test_button" onclick="testGet()">Test GET</button>
+<div id="examData" >Exam Data</div>
 
 <table class = "searchStyle tabPage search" id="tagRequirements"></table>
 
