@@ -8,6 +8,7 @@ import my_app.config.settings as settings
 import my_app.scripts.create_exam as select
 from os.path import join
 import ast
+import tarfile
 @app.route("/home")
 def mainPage():
     return render_template("searchBar.html")
@@ -68,3 +69,15 @@ def setup_logging(logging_path, level):
     loggers = [app.logger]
     for logger in loggers:
         logger.addHandler(file_handler)
+
+@app.route("/untar/", methods=['POST', 'GET'])
+def extract_tar_file():
+    print("here")
+    if request.method == 'POST':
+        print("there")
+        s = request.form['url'].split("/")
+        s[-1] = "moodle"
+        tar = tarfile.open(request.form['url'])
+        tar.extractall("/".join(s))
+        tar.close()
+    return "untar"

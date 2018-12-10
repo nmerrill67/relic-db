@@ -225,6 +225,10 @@ function testGet() {
         });
 }
 
+function untar() {
+    $.post("/untar/", {url: document.getElementById("untar").value});
+}
+
 function importQuestionsIntoServer()
 {
     f = document.getElementById('fileid');
@@ -232,20 +236,20 @@ function importQuestionsIntoServer()
     f.addEventListener('change', function(){
         var file = this.files[0];
         var fileName = file.name;
-        if (!fileName.endsWith(".mbz")) {alert("Only .mbz files allowed!");}
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://localhost:5001' + file.name, true);
-        xhr.onload = function () {
-            if (xhr.status == 200) {
-                // File(s) uploaded.
-                alert("SUCCUESS");
-            } else {
-                alert('An error occurred!');
-            }
-        };
-        var formData = new FormData();
-        formData.append('file', file, "mbzs/question.mbz");
-        xhr.send(formData);       
-    }, false);
+        if (!fileName.endsWith(".xml")) {alert("Only .xml files allowed!");}
+        var objectURL = window.URL.createObjectURL(file);
+        $.ajax({
+            url: objectURL,
+            type: "GET",
+            contentType: "text/plain",
+            success: function(result) {
+                result.childNodes.forEach(function(element) {
+                    document.getElementById("questionEnter").value = $($(element).find("required_files > required_file > content")[1]).text();
+                });
+            },
+            failure: function(errMsg) {
+                        alert(errMsg);
+                    }
+            });
+        });
 }
-

@@ -93,7 +93,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
                 </div><!--The text of all the tags -->
         </div>
     </div>
-
+    <div>
+        <button onclick="untar()">Extract MBZ:</button>
+        <input type="text" id="untar"/>
+    </div>
     <div class="column">
         <div class="w3-container">
           <button onclick="document.getElementById('id01').style.display='block'" class="tabHover">Add Question</button>
@@ -106,9 +109,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
               </header>
               
               <div class="w3-container">
-               <input type="file" id="fileid" style="display:none;" accept=".mbz"/>
+               <input type="file" id="fileid" style="display:none;" accept=".xml"/>
                <input type="submit" id="uploadid" style="display:none;" />
-               <button id='buttonid' class="w3-button w3-block w3-orange w3-section w3-padding" onclick = importQuestionsIntoServer()>Import Question</button>
+               <button id='buttonid' class="w3-button w3-block w3-orange w3-section w3-padding" onclick = importQuestionsIntoServer()>Import Question (from vpl.xml)</button>
               <form class="w3-container" action="/action_page.php">
                 <div class="w3-section">
              
@@ -124,7 +127,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                   </div>
                   
                   <label><b>Question:</b></label>
-                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your question" name="usrname" required>
+                  <textarea id="questionEnter" class="w3-input w3-border w3-margin-bottom" name="usrname" required rows=6 placeholder="Enter question"></textarea>
                   
                   <label><b>Question answer:</b></label>
                   <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your answer" name="usrname" required>
@@ -211,6 +214,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </table>
 
 <script>
+
     function unitChange() {
         console.log("unit");
         if ($('#tagUnit')[0].options[$('#tagUnit')[0].options.selectedIndex].value != "0") {
@@ -437,7 +441,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         </td>
         <td>
             <select name="Question Type" style="font-size:10px;" id="tagType">
-                <option value="1" selected>Question Type</option>
+                <option value="" selected>Question Type</option>
                 <option value="1">Multiple choice</option>
                 <option value="2">Fill in the blank</option>
                 <option value="3">Coding</option>
