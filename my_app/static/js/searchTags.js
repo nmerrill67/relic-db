@@ -227,9 +227,25 @@ function testGet() {
 
 function importQuestionsIntoServer()
 {
+    f = document.getElementById('fileid');
+    f.click();
+    f.addEventListener('change', function(){
+        var file = this.files[0];
+        var fileName = file.name;
+        if (!fileName.endsWith(".mbz")) {alert("Only .mbz files allowed!");}
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://localhost:5001' + file.name, true);
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                // File(s) uploaded.
+                alert("SUCCUESS");
+            } else {
+                alert('An error occurred!');
+            }
+        };
+        var formData = new FormData();
+        formData.append('file', file, "mbzs/question.mbz");
+        xhr.send(formData);       
+    }, false);
 }
 
-function handleFiles(files)
-{
-    /* TODO */
-}

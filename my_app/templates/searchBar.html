@@ -106,23 +106,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
               </header>
               
               <div class="w3-container">
-               <input id="fileid" type="file" onchange=handleFiles(this.files) name='filename' hidden/>
-               <button id='buttonid' class="w3-button w3-block w3-orange w3-section w3-padding" onclick = importQuestionsIntoServer() onchange=handleFiles(this.files) type="file">Import Question</button>
+               <input type="file" id="fileid" style="display:none;" accept=".mbz"/>
+               <input type="submit" id="uploadid" style="display:none;" />
+               <button id='buttonid' class="w3-button w3-block w3-orange w3-section w3-padding" onclick = importQuestionsIntoServer()>Import Question</button>
               <form class="w3-container" action="/action_page.php">
                 <div class="w3-section">
              
                   <label><b>Question type:</b></label>
-                  <div class="w3-dropdown-hover">
-            <button class="w3-button w3-black">Types</button>
-            <div class="w3-dropdown-content w3-bar-block w3-border">
-              <a href="#" class="w3-bar-item w3-button">Multiple Choice</a>
-              <a href="#" class="w3-bar-item w3-button">Fill in the blank</a>
-              <a href="#" class="w3-bar-item w3-button">Coding</a>
-            </div>
-          </div>
-        </div>
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button w3-black">Types</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-border">
+                          <a href="#" class="w3-bar-item w3-button">Multiple Choice</a>
+                          <a href="#" class="w3-bar-item w3-button">Fill in the blank</a>
+                          <a href="#" class="w3-bar-item w3-button">Coding</a>
+                        </div>
+                    </div>
+                  </div>
                   
-                   <label><b>Question:</b></label>
+                  <label><b>Question:</b></label>
                   <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your question" name="usrname" required>
                   
                   <label><b>Question answer:</b></label>
@@ -132,55 +133,55 @@ body {font-family: Arial, Helvetica, sans-serif;}
                   
                   <label><b>Question difficulty:</b></label>
                   <div class="w3-dropdown-hover">
-            <button class="w3-button w3-black">Level</button>
-            <div class="w3-dropdown-content w3-bar-block w3-border">
-              <a href="#" class="w3-bar-item w3-button">Easy</a>
-              <a href="#" class="w3-bar-item w3-button">Medium</a>
-              <a href="#" class="w3-bar-item w3-button">Hard</a>
-            </div>
-          </div>
-          <br />
-                   <label><b>Question cognitive level:</b></label>
-                   <div class="w3-dropdown-hover">
-            <button class="w3-button w3-black">Level</button>
-            <div class="w3-dropdown-content w3-bar-block w3-border">
-              <a href="#" class="w3-bar-item w3-button">1</a>
-              <a href="#" class="w3-bar-item w3-button">2</a>
-              <a href="#" class="w3-bar-item w3-button">3</a>
-            </div>
-          </div>
+                    <button class="w3-button w3-black">Level</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-border">
+                          <a href="#" class="w3-bar-item w3-button">Easy</a>
+                          <a href="#" class="w3-bar-item w3-button">Medium</a>
+                          <a href="#" class="w3-bar-item w3-button">Hard</a>
+                        </div>
+                  </div>
                   <br />
-                      <label><b>Question unit:</b></label>
-                   <div class="w3-dropdown-hover">
-            <button class="w3-button w3-black">Unit</button>
-            <div class="w3-dropdown-content w3-bar-block w3-border">
-              <a href="#" class="w3-bar-item w3-button">Syllabus/Intro</a>
-              <a href="#" class="w3-bar-item w3-button">Python Data</a>
-              <a href="#" class="w3-bar-item w3-button">Functions</a>
-               <a href="#" class="w3-bar-item w3-button">Selection</a>
-              <a href="#" class="w3-bar-item w3-button">Iteration</a>
-              <a href="#" class="w3-bar-item w3-button">Iterables</a>
-            </div>
-          </div>
+                  <label><b>Question cognitive level:</b></label>
+                  <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-black">Level</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                      <a href="#" class="w3-bar-item w3-button">1</a>
+                      <a href="#" class="w3-bar-item w3-button">2</a>
+                      <a href="#" class="w3-bar-item w3-button">3</a>
+                    </div>
+                  </div>
                   <br />
-                   <label><b>Question topic:</b></label>
-                 <div class="w3-dropdown-hover">
-            <button class="w3-button w3-black">Topic</button>
-            <div class="w3-dropdown-content w3-bar-block w3-border">
-              <a href="#" class="w3-bar-item w3-button">Unit 1</a>
-              <a href="#" class="w3-bar-item w3-button">Unit 2</a>
-              <a href="#" class="w3-bar-item w3-button">Unit 3</a>
-            </div>
-          </div>
+                  <label><b>Question unit:</b></label>
+                  <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-black">Unit</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                      <a href="#" class="w3-bar-item w3-button">Syllabus/Intro</a>
+                      <a href="#" class="w3-bar-item w3-button">Python Data</a>
+                      <a href="#" class="w3-bar-item w3-button">Functions</a>
+                       <a href="#" class="w3-bar-item w3-button">Selection</a>
+                      <a href="#" class="w3-bar-item w3-button">Iteration</a>
+                      <a href="#" class="w3-bar-item w3-button">Iterables</a>
+                    </div>
+                  </div>
+                  <br />
+                  <label><b>Question topic:</b></label>
+                  <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-black">Topic</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                      <a href="#" class="w3-bar-item w3-button">Unit 1</a>
+                      <a href="#" class="w3-bar-item w3-button">Unit 2</a>
+                      <a href="#" class="w3-bar-item w3-button">Unit 3</a>
+                    </div>
+                  </div>
                   <br />
                   
                   <label><b>Question SLO:</b></label>
-                 <div class="w3-dropdown-hover">
-            <button class="w3-button w3-black">SLO</button>
-            <div class="w3-dropdown-content w3-bar-block w3-border">
-              <a href="#" class="w3-bar-item w3-button">USA</a>
-            </div>
-          </div>
+                  <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-black">SLO</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                      <a href="#" class="w3-bar-item w3-button">USA</a>
+                    </div>
+                  </div>
                   <br />
                   
                   <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Add Question</button>
